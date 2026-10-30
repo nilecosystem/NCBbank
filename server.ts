@@ -17,7 +17,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
+
+// 🔥 اصلاح مهم برای Render
+const PORT = process.env.PORT || 3000;
 
 // Body parsing middleware
 app.use(express.json());
@@ -25,10 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Health Check
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'online', 
-    timestamp: new Date().toISOString(), 
-    engine: 'Nile Institutional 4-Ledger Backend v3.4' 
+  res.json({
+    status: 'online',
+    timestamp: new Date().toISOString(),
+    engine: 'Nile Institutional 4-Ledger Backend v3.4'
   });
 });
 
@@ -42,7 +44,7 @@ app.use('/api/cards', cardRouter);
 app.use('/api/user', userRouter);
 app.use('/api/admin', adminRouter);
 
-// Development vs Production Frontend Serving
+// 🔥 حالت Production برای Render
 async function startServer() {
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve(__dirname, 'dist')));
@@ -58,7 +60,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`[Nile Backend] Institutional Full-Stack Server active on http://0.0.0.0:${PORT}`);
+    console.log(`[Nile Backend] Server active on http://0.0.0.0:${PORT}`);
   });
 }
 
