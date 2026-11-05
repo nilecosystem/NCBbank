@@ -107,7 +107,7 @@ const AppContent: React.FC = () => {
         {/* Artwork Image with 75% dark vignette overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity filter contrast-125"
-          style={{ backgroundImage: `url('/assets/branding/1000095277.jpg')` }}
+          style={{ backgroundImage: `url('/assets/backgrounds/luxury-finance-bg%20copy.jpg')` }}
         />
         {/* Dark Luxury Vignette Gradient Overlay (68% to 85% opacity) */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#030611]/80 via-[#030611]/72 to-[#030611]/90" />
