@@ -1,1 +1,9 @@
-The Nile Ecosystem is a decentralized cryptocurrency bank and marketplace offering incredible deals.
+
+
+https://nileecosystem.com :
+
+
+The Nile Ecosystem is a decentralized cryptocurrency
+
+
+ bank and marketplace offering incredible deals.
