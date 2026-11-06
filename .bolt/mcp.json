@@ -8,6 +8,12 @@
     },
     "shaders": {
       "enabled": true
+    },
+    "sentry": {
+      "enabled": true
+    },
+    "linear": {
+      "enabled": true
     }
   }
 }
