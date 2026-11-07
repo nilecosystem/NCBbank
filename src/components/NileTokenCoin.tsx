@@ -67,20 +67,10 @@ export const NileTokenCoin: React.FC<NileTokenCoinProps> = ({
           animate ? 'animate-bounce duration-[4000ms]' : ''
         }`}>
           {/* Inner Coin Trench & Dark Obsidian Core */}
-          <div className="w-full h-full rounded-full bg-gradient-to-br from-[#0C152B] via-[#070D1B] to-[#040812] p-1 flex items-center justify-center overflow-hidden border border-[#E5B842]/40 relative">
+          <div className="w-full h-full rounded-full p-1 flex items-center justify-center overflow-hidden border border-[#E5B842]/40 relative" style={{ background: '#050914', backgroundColor: '#050914' }}>
             {/* Specular Diagonal Light Sheen */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-60 pointer-events-none" />
 
-            {/* Official 3D Embossed Golden Emblem */}
-            <img 
-              src="/assets/branding/nile-token-coin.png" 
-              alt="Official NILE Token Coin" 
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-contain rounded-full filter drop-shadow-[0_2px_8px_rgba(229,184,66,0.6)] transform group-hover:scale-105 transition-transform" 
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).src = '/assets/branding/nile-official-logo.png';
-              }}
-            />
           </div>
         </div>
       </div>
